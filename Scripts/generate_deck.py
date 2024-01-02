@@ -66,7 +66,7 @@ os.environ["OPENAI_API_KEY"] = api_key
 
 #-- Translation Parameters --#
 #Basic mandatory fields
-hsk_level = 1                                                                             # HSK level, specific to learning Chinese
+hsk_level = 2                                                                             # HSK level, specific to learning Chinese
 native_language = "English"                                                               # Language to translate words into
 learning_language = "Mandarin Chinese"                                                    # Language to translate the words from
 
@@ -82,7 +82,7 @@ additional_sentence_query = "Include the translated sentence, the pinyin, and en
 #-- Anki Parameters --#
 #Deck ID and names
 deck_id = 2059400112
-deck_name = "HSK1 (GPT Generated)"
+deck_name = f"HSK{hsk_level} (GPT Generated)"
 deck_folder = os.path.join(".", "Decks")
 
 
@@ -117,7 +117,7 @@ if __name__ == "__main__":
   word_df = pd.read_csv(wordlist_file, index_col=0, header=1)
 
   #Data-source specific formatting, in this case, removing any words which do not correspond with the HSK level.
-  mask = [int(x[0]) == hsk_level for x in word_df["HSK \nLevel-Order"]]
+  mask =   [str(x)[0] == str(hsk_level) for x in word_df["HSK \nLevel-Order"]]
   words = word_df.loc[mask, "Word"].values
 
 
