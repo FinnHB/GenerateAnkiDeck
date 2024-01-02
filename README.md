@@ -83,3 +83,7 @@ os.environ["OPENAI_API_KEY"] = api_key
 ```
 
 If you do not wish to create the separate api key, you can paste your API key directly into the code, although this is generally not advised.
+
+
+### Notice
+If you do find this project helpful, or want to develop it further, please get in contact.
