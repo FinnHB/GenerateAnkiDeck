@@ -9,7 +9,7 @@ _NOTE:_  To install packages from a requirements file, run `pip install -r requi
 ### Example Deck
 For the creation of the HSK 1 deck, created a [custom deck model](Scripts/genanki_model_templates.py) for genanki, where the answer contains both the definition of a word and an examples sentence, separated by a dot. Then I tried to asked chatGPT to create an example sentence with the pinyin and english translation, separating each element by a new line. Below are two examples.
 
-<img src="Images/SampleCard_1.png" width="425"/> <img src="Images/SampleCard_2.png" width="425"/>
+<img src="Images/SampleCard_1.png" width="400"/> <img src="Images/SampleCard_2.png" width="400"/>
 
 The only inputs which were required for this was the [list of HSK1 words](https://raw.githubusercontent.com/lemmih/lesschobo/master/data/HSK_Level_1_(New_HSK).csv), such as 不客气 and 茶, which were pulled from a GitHub repository from [lemmih](https://github.com/lemmih). From the list of words, the back of the flashcards is generated. An example for the full HSK-1 deck can be found [here](Decks/HSK1%20(GPT%20Generated).apkg).
 
